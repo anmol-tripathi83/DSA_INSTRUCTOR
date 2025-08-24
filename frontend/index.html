@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>DSA Instructor AI</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="chat-container">
-    <div class="chat-header">
-      <h1>DSA Instructor AI</h1>
-    </div>
+    <header class="chat-header">
+      <h2>👨‍🏫 DSA Instructor</h2>
+    </header>
 
-    <div class="chat-box" id="chat-box"></div>
+    <div id="chat-box" class="chat-box"></div>
 
     <div class="chat-input">
-      <input 
-        type="text" 
-        id="user-input" 
-        placeholder="Ask a DSA question..." 
-        autocomplete="off"
-      />
+      <textarea id="user-input" placeholder="Ask your DSA question..." rows="1"></textarea>
       <button id="send-btn">Send</button>
     </div>
   </div>

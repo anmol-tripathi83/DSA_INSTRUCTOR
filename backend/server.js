@@ -32,15 +32,17 @@ app.post('/generate', async (req, res) => {
       contents: req.body.prompt,
       config: {
         systemInstruction: `You are a DSA instructor. 
-        - If user asks a DSA question, answer clearly.
-        - Otherwise, respond dismissively.`
+        - If user asks a DSA question, answer clearly with step-by-step explanation.
+        - Otherwise, respond rudely and dismissively.`
       }
     });
 
     // SDK may return response as object → ensure you send proper text
     const textResponse = response.text || JSON.stringify(response);
 
-    res.json({ response: textResponse });
+    // send as "reply" (frontend expects this)
+    res.json({ reply: textResponse });
+
   } catch (error) {
     console.error("AI Error:", error.message);
     res.status(500).json({ error: 'Failed to generate content' });
