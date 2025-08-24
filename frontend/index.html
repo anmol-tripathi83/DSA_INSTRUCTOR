@@ -2,20 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DSA Instructor AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Instructor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="chat-container">
-    <header class="chat-header">
-      <h2>👨‍🏫 DSA Instructor</h2>
-    </header>
+  <div class="app-container">
 
-    <div id="chat-box" class="chat-box"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>📘 DSA Topics</h2>
+      <ul>
+        <li>Arrays</li>
+        <li>Strings</li>
+        <li>Linked List</li>
+        <li>Trees</li>
+        <li>Graphs</li>
+        <li>Dynamic Programming</li>
+        <li>Sorting & Searching</li>
+      </ul>
+    </aside>
 
-    <div class="chat-input">
-      <textarea id="user-input" placeholder="Ask your DSA question..." rows="1"></textarea>
-      <button id="send-btn">Send</button>
+    <!-- Main Chat Area -->
+    <div class="chat-container">
+      <header class="chat-header">
+        👨‍🏫 DSA Instructor
+      </header>
+
+      <main class="chat-box" id="chat-box"></main>
+
+      <div class="chat-input">
+        <textarea id="user-input" rows="2" placeholder="Ask me any DSA question..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+      </div>
     </div>
   </div>
 
