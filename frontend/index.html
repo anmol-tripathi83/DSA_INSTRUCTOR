@@ -7,35 +7,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
+  <div class="app-wrapper">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>📘 DSA Topics</h2>
+    <!-- Top Navigation -->
+    <nav class="navbar">
+      <h1>👨‍🏫 DSA Instructor</h1>
       <ul>
-        <li>Arrays</li>
-        <li>Strings</li>
-        <li>Linked List</li>
-        <li>Trees</li>
-        <li>Graphs</li>
-        <li>Dynamic Programming</li>
-        <li>Sorting & Searching</li>
+        <li class="active">Chat</li>
+        <li>Practice</li>
+        <li>Notes</li>
+        <li>Profile</li>
       </ul>
-    </aside>
+    </nav>
 
-    <!-- Main Chat Area -->
-    <div class="chat-container">
-      <header class="chat-header">
-        👨‍🏫 DSA Instructor
-      </header>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>📘 Topics</h2>
+        <ul>
+          <li>📊 Arrays</li>
+          <li>🔤 Strings</li>
+          <li>🔗 Linked List</li>
+          <li>🌳 Trees</li>
+          <li>🧭 Graphs</li>
+          <li>🧩 Dynamic Programming</li>
+          <li>⚡ Sorting & Searching</li>
+        </ul>
+      </aside>
 
-      <main class="chat-box" id="chat-box"></main>
+      <!-- Main Chat Area -->
+      <div class="chat-container">
+        
+        <!-- Chat -->
+        <main class="chat-box" id="chat-box"></main>
 
-      <div class="chat-input">
-        <textarea id="user-input" rows="2" placeholder="Ask me any DSA question..."></textarea>
-        <button onclick="sendMessage()">Send</button>
+        <!-- Input -->
+        <div class="chat-input">
+          <textarea id="user-input" rows="2" placeholder="Ask me any DSA question..."></textarea>
+          <button onclick="sendMessage()">Send</button>
+        </div>
       </div>
     </div>
+
+    <!-- Tips Section -->
+    <footer class="tips-box">
+      💡 Tip of the Day: "Always analyze time complexity before coding."
+    </footer>
   </div>
 
   <script src="script.js"></script>
